@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="{{url_for('static',filename='css/about.css')}}">
+{% extends 'layout.html' %}
+{% block body %}
+<div class="pass"></div>
+<div class="box ">
+    <div class="container">
+        <div class="top">
+            <div class="left">
+                <a href="/about"> 关于我们</a>
+            </div>
+            <div class="right">
+                <a href="/contact"> 联系我们</a>
+            </div>
+
+			</div>
+			<div class="content">
+				<div class="header">
+					<h4>项目背景</h4>
+					<div class="desc">Team Introduction</div>
+				</div>
+				<div class="wz">
+					杨绛在《钱锺书是怎样做读书笔记的》一文中写到：“许多人说，钱锺书记忆力超强，过目不忘。他本人却并以为自己有那么'神'。他只是好读书，肯下功夫，不仅读，还做笔记；不仅读一遍两遍，还会读三遍四遍，笔记不断地添补。所以他读的书虽然多，也不易遗忘。”
+					对于程序员而言，编程技术浩如烟海，新技术又层出不穷，对知识消化吸收并不易遗忘的最佳方式就是记录学习笔记。而程序员又是一个特别的群体，喜欢使用互联网的方式记录笔记。
+				</div>
+				<div class="header">
+					<h4>项目目的</h4>
+					<div class="desc">Team Purpose</div>
+				</div>
+				<div class="wz">
+
+					在线笔记学习的核心目的是为学习者提供一个便捷、高效的学习工具。它允许学习者在学习过程中随时记录、整理、回顾和分享笔记，从而帮助他们更好地理解和掌握知识。通过在线笔记系统，学习者可以轻松地创建、编辑和保存笔记，无论是在课堂上、图书馆还是家中，都能方便地进行学习。
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+{% endblock %}

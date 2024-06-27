@@ -1,0 +1,116 @@
+* {
+	/* margin: 0 auto; */
+	padding: 0 auto;
+}
+body{
+	background-color: #FAFAFA;
+}
+.box{
+ min-height: 55vh;
+}
+.box2{
+ min-height: 62vh;
+}
+
+#j1 {
+	width: 350px;
+	height: 320px;
+	margin: 0px auto;
+	border: 1px solid #FFFFFF;
+	background-color: #FFFFFF;
+	box-shadow: #ccc 0px 0px 10px;
+	border-radius: 3%;
+}
+#j2 {
+	width: 350px;
+	height: 370px;
+	margin: 0px auto;
+	border: 1px solid #FFFFFF;
+	background-color: #FFFFFF;
+	box-shadow: #ccc 0px 0px 10px;
+	border-radius: 3%;
+}
+@font-face{font-family:'ZoomlaTangYin-A053'; /*逐浪唐寅行书体*/
+    src: url('https://code.z01.com/font/ZoomlaTangYin-A053.eot?#iefix'); /* IE9 */
+    src: url('https://code.z01.com/font/ZoomlaTangYin-A053.eot?#iefix') format("embedded-opentype"), /* IE6-IE8 */
+    url('https://code.z01.com/font/ZoomlaTangYin-A053.woff') format("woff"), /* chrome、firefox */
+    url('https://code.z01.com/font/ZoomlaTangYin-A053.ttf') format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    url('https://code.z01.com/font/ZoomlaTangYin-A053.svg#ZoomlaTangYin-A053') format("svg"); /* iOS 4.1- */
+    font-style: normal; font-weight: normal;}
+
+#j1 h3{
+font-family:'ZoomlaTangYin-A053';
+	padding-left: 100px;
+	margin-top: 25px !important;
+}
+#j2 h3{
+font-family:'ZoomlaTangYin-A053';
+
+	margin-top: 25px !important;
+
+}
+#j1 input{
+	width: 280px;
+	margin-left: 28px;
+	margin-top: 8px;
+	border: 1px solid #000;
+
+
+}
+#j2 input{
+	width: 280px;
+	margin-left: 28px;
+	margin-top: 8px;
+	border: 1px solid #000;
+
+
+}
+#j1 .b{
+	width: 200px;
+	margin-left: 70px;
+	font-size: 16px;
+    margin-top: 10px;
+	background-color: #557cb6;
+	color: #fff;
+	border-radius:4px;
+}
+#j2 .b{
+	width: 200px;
+	margin-left: 70px;
+	font-size: 16px;
+    margin-top: 10px;
+	background-color: #557cb6;
+	color: #fff;
+	border-radius:4px;
+}
+#j1 label{
+	margin-left: 8px;
+	margin-bottom: 0px;
+	margin-top: 3px;
+}
+#j2 label{
+	margin-left: 8px;
+	margin-bottom: 0px;
+	margin-top: 3px;
+}
+.myul li{
+	font-size: 20px;
+	font-weight: 600;
+
+}
+.myul li:hover .nav-link{
+	 color:#C0AB71;
+
+}
+.footerul{
+	width: 286px;
+	display: flex;
+	justify-content: space-evenly;
+	margin: auto;
+}
+.footerul li{
+display: inline-block;
+}
+
+
+

@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="{{url_for('static',filename='css/login.css')}}">
+
+{% extends 'layout.html' %}
+{% block body %}
+<div class="box2">
+    <div class="pass" style="height:46px"></div>
+    <div id="j2">
+    <h3 style="text-align: center;"><img src="/static/img/2.jpg" width="35px">lOGIN</h3>
+    <form action="" method="post">
+        {{ form.csrf_token }}
+        {% for item in form %}
+            <p>{{ item.label }}</p>
+            <p>{{ item }}</p>
+        {% endfor %}
+        <p>
+            <input type="submit" value="登录" class="b" >
+        </p>
+    </form>
+</div>
+    </div>
+{% endblock %}

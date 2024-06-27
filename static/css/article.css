@@ -1,0 +1,65 @@
+
+.box {
+    width:80%;
+    margin:0px auto;
+    border-radius: 4px;
+    background: #f3f3f3;
+    padding: 10px;
+    padding-left: 60px;
+    padding-right: 60px;
+    min-height: 400px;
+
+}
+.box1{
+    min-height: 84vh;
+}
+
+h2 {
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.p{
+    margin-top:20px;
+}
+
+
+
+.p1 {
+     margin: 10px auto;
+    line-height: 28px;
+    letter-spacing: 2px;
+    text-align: left;
+    text-indent: 2em;
+    font-size:14px;
+}
+.p1 pre{
+ text-indent: 0em;
+}
+
+
+article {
+    font-size: 14px;
+    color:#C0AB71;
+    font-style: italic;
+    text-align: center;
+}
+
+.myul li{
+	font-size: 20px;
+	font-weight: 600;
+
+}
+.myul li:hover .nav-link{
+	 color:#C0AB71;
+
+}
+.footerul{
+	width: 286px;
+	display: flex;
+	justify-content: space-evenly;
+	margin: auto;
+}
+.footerul li{
+display: inline-block;
+}

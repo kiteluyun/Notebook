@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css')}}">
+{% extends 'layout.html' %}
+{% block body %}
+<div class="pass" style="width: 100%;height: 40px;"></div>
+<div class="header">
+      <h1>欢迎使用读书笔记</h1>
+      {% if session.logged_in == NULL %}
+        <a class="b1" href="/register">注册</a>
+        <a class="b2" href="/login">登录</a>
+      {% endif %}
+      <div class="container">
+          <div class="row mt-4">
+              <div class="col-sm-12 col-md-6  p-2 my-3">
+                  <div class="m-3 c p-5">
+                      <p>读书笔记你最好的学习伴侣</p >
+                      <p>用小记收集与记录，用知识库整理与输出。从碎片化到结构化，构建知识体系</p >
+                  </div>
+              </div>
+              <div class=" col-sm-12 col-md-6  p-2 my-3">
+                  <div class=" m-3 c p-5">
+                      <p>每个人都能构建知识体系</p >
+                      <p>用小记收集与记录，用知识库整理与输出。从碎片化到结构化，构建知识体系</p >
+                  </div>
+              </div>
+          </div>
+      </div>
+</div>
+
+{% endblock %}

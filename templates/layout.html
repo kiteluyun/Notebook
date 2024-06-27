@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>读书笔记</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+     <script src="{{url_for('static', filename='js/jquery-3.2.1.min.js') }} "></script>
+    <script src="{{url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{url_for('static', filename='js/bootstrap.min.js') }} "></script>
+    <script src="{{url_for('static', filename='js/bootstrap.js') }}"></script>
+    <script src="{{url_for('static', filename='ckeditor/ckeditor.js') }}"></script>
+</head>
+<body>
+     {% include 'includes/_navbar.html' %}
+    <div style="margin-top: 100px;">
+      {% include 'includes/_messages.html' %}
+      {% block body %}{% endblock %}
+    </div>
+    {% include 'includes/_footer.html' %}
+</body>
+</html>

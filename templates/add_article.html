@@ -1,0 +1,59 @@
+ <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css')}}">
+
+
+{% extends 'layout.html' %}
+{% block body %}
+ <br>
+	<div class="container" style="heigth:100%;">
+	<div class="row">
+	<h2>添加笔记</h2>
+		{% from "includes/_formhelpers.html" import render_field %}
+        <form method="post" action="/add_article" novalidate>
+			 {# 使用宏定义一个接收错误信息的函数 #}
+        {% macro print_error(errors) %}
+        {% for error_message in errors %}
+            <p class="error" style="color: red;
+                display:inline;">{{ error_message }}</p >
+        {% endfor %}
+        {% endmacro %}
+			{{ form.csrf_token }}
+	<div style="font-size: 20px;" class=" col-sm-12 col-md-12 d-inline-block">
+		<span>{{ form.title.label }}</span><br>
+		{{ form.title }}{{ print_error(form.title.errors) }}
+	</div>
+		<div class=" col-sm-12 col-md-12 d-inline-block" style="font-size: 20px;"><br />
+			<span>{{ form.content.label }}</span><br>
+			{{ form.content }}{{ print_error(form.content.errors) }}
+		</div>
+			<br>
+<!--			<label for="currentTime">日期:<input type="text" id="currentTime" name="time"></label><br>-->
+			<input type="submit" class="btn btn-primary mt-3 ms-3" value="提交">
+       </form>
+	</div>
+	</div>
+	<br /><br><br><br><br>
+    <script type="text/javascript">
+        CKEDITOR.replace('Text');
+    </script>
+<!--<script type="text/javascript">-->
+<!--        CKEDITOR.replace('Text');-->
+<!--        // 获取当前时间-->
+<!--      function getCurrentTime() {-->
+<!--            var currentDate = new Date();-->
+<!--            var second = currentDate.getSeconds();-->
+<!--            function num(){-->
+<!--            if(second<10){-->
+<!--            second = '0'+second-->
+<!--            }-->
+<!--            return second-->
+<!--            }-->
+<!--            var time =  currentDate.getFullYear()+"."+(currentDate.getMonth()+1) +"."+currentDate.getDate()+"  "+currentDate.getHours() + ":" + currentDate.getMinutes() + ":" + num();-->
+<!--            document.getElementById('currentTime').value = time;-->
+<!--         }-->
+
+<!--      // 设置输入框的当前时间-->
+<!--      getCurrentTime();-->
+<!--      // 每隔一定时间更新一次时间（例如每秒更新一次）-->
+<!--      setInterval(getCurrentTime, 1000);-->
+<!--    </script>-->
+{% endblock %}

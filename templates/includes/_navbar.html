@@ -1,0 +1,34 @@
+
+      <header class="header-top">
+		<nav class="navbar navbar-expand-md bg-light  fixed-top">
+			<div class="container pt-2 pb-2">
+				<a href="#" class="navbar-brand"></a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#demo">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div id="demo" class="collapse navbar-collapse justify-content-between">
+					<ul class="navbar-nav myul">
+						<li class="nav-item"><a class="nav-link text-center">学习笔记</a></li>
+						<li class="nav-item"><a class="nav-link  text-center" href="/">主页</a></li>
+						<li class="nav-item"><a class="nav-link  text-center" href="/articles">笔记</a></li>
+						<li class="nav-item"><a class="nav-link  text-center" href="/about">关于</a></li>
+					</ul>
+					<div class="navbar-nav ">
+						<div class="row">
+							<div class=" position-relative">
+								<ul class="navbar-nav myul">
+									{% if session.logged_in %}
+									<li class="nav-item"><a class="nav-link  text-center" href="/dashboard">控制台</a></li>
+									<li class="nav-item "><a class="nav-link text-center" href="/logout">退出</a></li>
+									{% else %}
+									<li class="nav-item"><a class="nav-link  text-center" href="/login">登录</a></li>
+									<li class="nav-item"><a class="nav-link  text-center" href="/register">注册</a></li>
+									{% endif %}
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>

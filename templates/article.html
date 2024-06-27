@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="{{url_for('static',filename='css/article.css')}}">
+{% extends 'layout.html' %}
+{% block body %}
+<div class="pass" style="width: 100%;height: 20px;"></div>
+<br>
+<div class="box">
+<div class="p">
+  <h2>{{article.title}}</h2>
+  <article>作者：{{article.author}} &nbsp {{article.create_date}} </article>
+  <div class="p1">
+    {{article.content | safe}}
+  </div>
+</div>
+</div>
+{% endblock %}

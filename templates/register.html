@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="{{url_for('static',filename='css/register.css')}}">
+{% extends 'layout.html' %}
+{% block body %}
+<div class="pass " style="width: 100%;height: 2px;"></div>
+<div id="j1">
+    <h3 class="h3"><img src="/static/img/2.jpg" width="35px">用户注册</h3>
+
+    <form  method="post" action="/register" novalidate>
+        {# 使用宏定义一个接收错误信息的函数 #}
+        {% macro print_error(errors) %}
+        {% for error_message in errors %}
+            <p class="error" style="color: red;
+                display:inline;">{{ error_message }}</p >
+        {% endfor %}
+        {% endmacro %}
+        {{ form.csrf_token }}
+        <div>
+        <span>{{ form.username.label }}</span><br>
+        {# 调用表单字段 #}
+        {{ form.username }}<br>{{ print_error(form.username.errors) }}<br>
+        </div>
+        <div>
+        <span>{{ form.password.label }}</span><br>
+         {{ form.password }}<br>{{ print_error(form.password.errors) }}<br>
+        </div>
+        <div>
+        <span>{{ form.confirm.label }}</span><br>
+         {{ form.confirm }}<br>{{ print_error(form.confirm.errors) }}<br>
+        </div>
+        <div>
+        <span>{{ form.email.label }}</span><br>
+         {{ form.email }}<br>{{ print_error(form.email.errors) }}<br>
+        <br></div>
+         <input type="submit"  class="zc" value="注册"/>
+    </form>
+</div>
+{% endblock %}

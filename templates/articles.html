@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="{{url_for('static',filename='css/articles.css')}}">
+{% extends 'layout.html' %}
+{% block body %}
+<br>
+<div class="container">
+ <div class="box">
+    {% for article in articles %}
+        <div class="p">
+            <h2>{{article.title}}</h2>
+            <article>作者:{{article.author}} &nbsp {{article.create_date}}</article>
+            <p>{{article.content | safe | truncate(200, True)}} </p>
+            <a href="/page/articles/article/{{article.id}}"><span class="bt">查看全文-></span></a>
+            <hr>
+        </div>
+    {% endfor %}
+</div>
+	</div>
+     <nav aria-label="Page navigation" id="nav_navigation">
+                <ul class="col-12 paginates pagination">
+						{% if page==1 %}
+						<li><a href="/page/articles/1"  aria-label="Previous">上一页</a>&nbsp;</li>
+						{% else %}
+						<li><a href="/page/articles/{{page-1}}"  aria-label="Previous">上一页</a></li>
+						{% endif %}
+
+						{% for i in range(total) %}
+						<li><a href="/page/articles/{{i+1}}">{{i+1}}</a></li>&nbsp;
+						{% endfor %}
+
+						{% if page == total %}
+						<li><a href="/page/articles/{{page}}" aria-label="Next">下一页</a></li>&nbsp;
+						{% else %}
+						<li><a href="/page/articles/{{page+1}}"  aria-label="Previous">下一页</a><li>
+						{% endif %}
+					</ul>
+</nav>
+
+{% endblock %}

@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css')}}">
+
+{% extends 'layout.html' %}
+{% block body %}
+<br>
+
+   <div class="container">
+   <div class="row">
+   <h2>编辑笔记</h2>
+      {% from "includes/_formhelpers.html" import render_field %}
+        <form method="POST">
+             {# 使用宏定义一个接收错误信息的函数 #}
+        {% macro print_error(errors) %}
+        {% for error_message in errors %}
+            <p class="error" style="color: red;
+                display:inline;">{{ error_message }}</p >
+        {% endfor %}
+        {% endmacro %}
+            {{ form.csrf_token }}
+   <div class=" col-sm-12 col-md-12 d-inline-block" style="font-size: 18px;" >
+        <span>{{ form.title.label }}</span><br>
+         {{ form.title }}{{ print_error(form.title.errors) }}
+   </div>
+      <div class=" col-sm-12 col-md-12 d-inline-block" style="font-size: 20px;"><br />
+                  <span>{{ form.content.label }}</span><br>
+          {{ form.content }}{{ print_error(form.content.errors) }}<br>
+      </div>
+         <br>
+         <input type="submit" class="btn btn-primary mt-3 ms-3" value="提交">
+       </form>
+   </div>
+   </div>
+   <br /><br><br><br><br>
+    <script type="text/javascript">
+        CKEDITOR.replace('Text');
+
+    </script>
+
+{% endblock %}

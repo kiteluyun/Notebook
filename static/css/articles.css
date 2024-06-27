@@ -1,0 +1,166 @@
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    padding-left: 20px;
+    padding-right: 20px;
+    background: gray;
+    display: flex;
+    flex-direction: row
+}
+
+.nav a {
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    color: #fff;
+}
+
+.nav .controls {
+    margin-left: auto;
+}
+
+.box {
+    width:100%;
+    margin: 0 auto;
+    background: #f3f3f3;
+    padding: 10px;
+    text-align: center;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 55px;
+    border-radius:4px;
+     min-height: 500px;
+
+}
+
+.box h2 {
+    margin: 20px 0px;
+}
+
+.box span {
+    text-align: center;
+
+}
+
+.box p {
+    margin: 10px auto;
+    line-height: 28px;
+    letter-spacing: 2px;
+    text-align: left;
+    text-indent: 2em;
+    font-size: 14px;
+}
+pre{
+    text-align: left;
+}
+.box .p {
+    margin: 80px 0px;
+    text-align: center;
+
+}
+.box .p:first-child{
+ margin: 26px 0px;
+}
+.box hr {
+    margin-top: 100px;
+}
+
+
+
+article {
+    font-size: 14px;
+    color:#C0AB71;
+    font-style: italic;
+    text-align: center;
+}
+
+.bt {
+    display:line-block;
+    background: rgb(11, 134, 110);
+    color: #fff;
+    width:100px;
+    text-align:center;
+    margin-top:10px;
+    height: 30px;
+    font-size: 16px;
+    border-color: burlywood;
+    float: left;
+    line-height:30px;
+}
+
+.pagination {
+    display: inline-block;
+    padding-left: 0;
+    margin-top:40px;
+    border-radius: 4px;
+    justify-content:center;
+
+}
+.pagination>li>a:hover {
+    background-color:#ebeaea;
+}
+.pagination>li:first-child>a{
+  margin-right:3px;
+}
+.pagination>li>a {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: 0px;
+    line-height: 1.42857143;
+    color:#03559b;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+@media all and (max-width:600px) {
+    .nav {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .nav.login {
+        margin-left: unset;
+    }
+
+    .nav a {
+        text-align: center;
+        padding: 10px;
+        border-top: 1px solid #000;
+        /* border-bottom:1px solid rgba(0,0,0,0.1);} */
+
+        .nav li:last-of-type a {
+            border-bottom: none;
+        }
+    }
+
+    .box {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /*   span{margin-left: 300px;} */
+}
+.myul li{
+	font-size: 20px;
+	font-weight: 600;
+
+}
+.myul li:hover .nav-link{
+	 color:#C0AB71;
+
+}
+.footerul{
+	width: 286px;
+	display: flex;
+	justify-content: space-evenly;
+	margin: auto;
+}
+.footerul li{
+display: inline-block;
+}
